@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKithiTable extends Migration
+class CreatePhieudangkyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,22 @@ class CreateKithiTable extends Migration
      */
     public function up()
     {
-        Schema::create('kithi', function (Blueprint $table) {
-           $table->increments('id');
+        Schema::create('phieudangky', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('ten')->nullable();
             $table->string('ma')->nullable();     
-            $table->string('ngay')->nullable(); 
+            $table->string('bailam_ma')->nullable();
+            $table->string('nguoidung_tendangnhap')->nullable();
         });
     }
 
     /**
-     * Reverse the migrations.            $table->string('avatar')->nullable(); 
+     * Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('kithi');
+        Schema::dropIfExists('phieudangky');
     }
 }

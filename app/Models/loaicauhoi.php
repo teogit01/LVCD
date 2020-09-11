@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class dethi extends Model
+class loaicauhoi extends Model
 {
     //
 
-     protected $table = 'dethi';
+     protected $table = 'loaicauhoi';
 
     protected $primaryKey = 'id';
 
@@ -17,8 +17,7 @@ class dethi extends Model
     protected $fillable = [
     	'id',
      	'ma',
-     	'ten',
-        'mon_ma' 
+     	'ten'  
     ];
     public $timestamps = false;
 }

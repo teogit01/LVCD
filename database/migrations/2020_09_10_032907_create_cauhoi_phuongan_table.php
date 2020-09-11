@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDethiTable extends Migration
+class CreateCauhoiPhuonganTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateDethiTable extends Migration
      */
     public function up()
     {
-        Schema::create('dethi', function (Blueprint $table) {
+        Schema::create('cauhoi_phuongan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ten')->nullable();
-            $table->string('ma')->nullable();     
-            $table->string('mon_ma')->nullable();     
-             
+            $table->string('cauhoi_ma')->nullable(); 
+            $table->string('phuongan_ma')->nullable();
         });
     }
 
@@ -29,6 +27,6 @@ class CreateDethiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dethi');
+        Schema::dropIfExists('cauhoi_phuongan');
     }
 }

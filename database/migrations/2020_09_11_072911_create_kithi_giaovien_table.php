@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDethiTable extends Migration
+class CreateKithiGiaovienTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateDethiTable extends Migration
      */
     public function up()
     {
-        Schema::create('dethi', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('ten')->nullable();
-            $table->string('ma')->nullable();     
-            $table->string('mon_ma')->nullable();     
-             
+        Schema::create('kithi_giaovien', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +26,6 @@ class CreateDethiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dethi');
+        Schema::dropIfExists('kithi_giaovien');
     }
 }

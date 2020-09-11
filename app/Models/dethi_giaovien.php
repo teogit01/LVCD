@@ -16,9 +16,8 @@ class dethi extends Model
 
     protected $fillable = [
     	'id',
-     	'ma',
-     	'ten',
-        'mon_ma' 
+     	'dethi_ma',
+     	'nguoidung_tendangnhap'
     ];
     public $timestamps = false;
 }
